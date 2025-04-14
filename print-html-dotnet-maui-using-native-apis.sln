@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "print-html-dotnet-maui-using-native-apis", "print-html-dotnet-maui-using-native-apis.csproj", "{CC8CA58C-CFDD-A8F4-C5CE-1C3D314F13BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC8CA58C-CFDD-A8F4-C5CE-1C3D314F13BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8CA58C-CFDD-A8F4-C5CE-1C3D314F13BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8CA58C-CFDD-A8F4-C5CE-1C3D314F13BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8CA58C-CFDD-A8F4-C5CE-1C3D314F13BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4025BAC-83CD-4181-969A-E04C78D99F9C}
+	EndGlobalSection
+EndGlobal
