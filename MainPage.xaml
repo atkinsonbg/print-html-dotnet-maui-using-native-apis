@@ -30,6 +30,13 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+
+            <Button
+                Text="Print Natively" 
+                SemanticProperties.Hint="Prints using the native APIs."
+                Clicked="OnPrintNativelyClicked"
+                HorizontalOptions="Fill" />
+                
         </VerticalStackLayout>
     </ScrollView>
 

@@ -3,9 +3,11 @@
 public partial class MainPage : ContentPage
 {
 	int count = 0;
+	IPrintService _printService;
 
-	public MainPage()
+	public MainPage(IPrintService printService)
 	{
+		_printService = printService;
 		InitializeComponent();
 	}
 
@@ -19,6 +21,24 @@ public partial class MainPage : ContentPage
 			CounterBtn.Text = $"Clicked {count} times";
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
+	}
+
+	private async void OnPrintNativelyClicked(object sender, EventArgs e)
+	{
+		try
+        {
+            string printable = $@"
+            <h2>Hello From a Native Print Dialog</h2>
+            <p><strong>This is a paragraph:</strong> Look at that!</p>
+			<div style='background-color:yellow;color:black;padding:20px;'>And this is a DIV with some inline styling</div>";
+
+            await _printService.PrintAsync($"This Is My Page Title", printable);
+        }
+        catch (Exception ex)
+        {
+            string errorMsg = $"{ex.Message} :: {ex.InnerException}";
+            await DisplayAlert("Print Error", errorMsg, "OK");
+        }
 	}
 }
 
