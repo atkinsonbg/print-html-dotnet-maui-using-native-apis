@@ -4,9 +4,11 @@ public partial class MainPage : ContentPage
 {
 	int count = 0;
 	IPrintService _printService;
+	IIdfaService _idfaService;
 
-	public MainPage(IPrintService printService)
+	public MainPage(IPrintService printService, IIdfaService idfaService)
 	{
+		_idfaService = idfaService;
 		_printService = printService;
 		InitializeComponent();
 	}
@@ -39,6 +41,13 @@ public partial class MainPage : ContentPage
             string errorMsg = $"{ex.Message} :: {ex.InnerException}";
             await DisplayAlert("Print Error", errorMsg, "OK");
         }
+	}
+
+	private async void OnFindIdfaClicked(object sender, EventArgs e)
+	{
+		var idfa = await _idfaService?.GetIdfaAsync();
+
+		await DisplayAlert("IDFA", idfa ?? "Unavailable", "OK");
 	}
 }
 

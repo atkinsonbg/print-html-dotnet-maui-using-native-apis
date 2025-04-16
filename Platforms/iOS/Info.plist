@@ -28,5 +28,7 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>This identifier is used to deliver personalized ads and track ad performance.</string>
 </dict>
 </plist>

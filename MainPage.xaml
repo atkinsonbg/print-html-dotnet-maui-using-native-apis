@@ -36,7 +36,12 @@
                 SemanticProperties.Hint="Prints using the native APIs."
                 Clicked="OnPrintNativelyClicked"
                 HorizontalOptions="Fill" />
-                
+
+            <Button
+                Text="Find IDFA" 
+                Clicked="OnFindIdfaClicked"
+                HorizontalOptions="Fill" />
+
         </VerticalStackLayout>
     </ScrollView>
 
